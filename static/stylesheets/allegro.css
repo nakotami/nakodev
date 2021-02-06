@@ -112,7 +112,8 @@ a:visited{
 .flow-root{
   flex: 33%;
   display: inline-block;
-  margin-left: 10px; 
+  margin-left: 10px;
+  margin-right: 10px; 
 }
 
 .headline-root{
@@ -138,4 +139,24 @@ a:visited{
 .logo-element{
   float: right;
   margin-top: -100px;
+}
+
+@media only screen and (max-width: 750px) {
+  .page-root{
+    display: block;
+  }
+  .ebb-root{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .headliner-element{
+    visibility: hidden;
+  }
+  .subliner-element{
+    visibility: hidden;
+  }
+  .logo-element{
+    margin-right: 10px;
+  }
 }
