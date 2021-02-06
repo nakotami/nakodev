@@ -163,4 +163,7 @@ a:visited{
   .logo-element{
     margin-right: 10px;
   }
+  body{
+    min-width: fit-content;
+  }
 }
