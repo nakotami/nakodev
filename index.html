@@ -1,267 +1,50 @@
-<head>
-  <title>inhaler boy</title>
-  <meta charset="utf-8"/>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-  <meta name="description" content="nakodev's dumb blog"/>
-  <meta name="keywords" content="nakodev nakotami nakatomi epoch kaverti bloxcity blox city tetrimus"/>
-  <meta name="author" content="nakotami" />
-  <meta name="copyright" content="nakotami" />
-  <meta name="robots" content="index"/>
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500&display=swap');
-
-:root {
-  --primary: #518380;
-  --header-text: #FFFFFF;
-  --content-text: #000000;
-}
-
-body{
-  font-family: 'Inter', sans-serif;
-  color: var(--content-text);
-}
-
-div{
-  box-sizing: border-box;
-}
-
-.header-element{
-  width: 100%;
-  height: 25px;
-  background-color: var(--primary);
-  font-size: 14px;
-  padding-top: 3.5px;
-  padding-left: 8px;
-  font-weight: 500;
-  color: var(--header-text);
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.interior-header-modifier{
-  width: calc(100% - 30px);
-  display: inline-block;
-}
-
-.interior-leave-modifier{
-  width: 25px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.interior-leave-modifier::before {
-	border-style: solid;
-	border-width: 0.15em 0.15em 0 0;
-	content: '';
-	display: inline-block;
-	height: 0.45em;
-	top: 0.15em;
-	width: 0.45em;
-  left: 0.25em;
-  transform: rotate(-135deg) translate(-1px, 2px);
-}
-
-.content-element{
-  font-size: 14px;
-  margin: 10px;
-}
-
-.content-image-establish-element{
-  float: left;
-  padding-right: 15px;
-}
-
-.content-image-fill-element{
-  margin-top: 5px;
-  width: 100%;
-}
-
-.content-link-fill-element{
-  height: 20px;
-  display: block;
-  padding: 5px;
-  padding-left: 10px;
-  font-size: 15px;
-  text-decoration: none;
-  transition: background-color 0.1s;
-}
-
-a{
-  color: var(--content-text);
-}
-
-a:visited{
-  color: var(--content-text);
-}
-
-.content-link-fill-element:hover{
-  background-color: #ebebeb;
-}
-
-.content-link-fill-element:focus{
-  background-color: #ebebeb;
-  outline: none;
-  color: var(--content-text);
-}
-
-.page-root{
-  width: auto;
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-}
-
-.ebb-root{
-  flex: 67%;
-  display: inline-block;
-}
-
-.flow-root{
-  flex: 33%;
-  display: inline-block;
-  margin-left: 10px; 
-}
-
-.headline-root{
-  width: auto;
-  max-width: 900px;
-  margin: 0 auto;
-  margin-bottom: 25px;
-}
-
-.headliner-element{
-  font-size: 100px;
-  font-weight: 200;
-  letter-spacing: 25px;
-}
-
-.subliner-element{
-  margin-top: -10px;
-  font-size: 25px;
-  font-weight: 200;
-  margin-left: 5px;
-}
-
-.logo-element{
-  float: right;
-  margin-top: -100px;
-}
-  </style>
-</head>
-
-<div class="headline-root">
-  <div class="headliner-element">nakodev</div>
-  <div id="sle" class="subliner-element">this is text</div>
-  <img src="nakodevicon.png" class="logo-element">
-</div>
-
-
-<div class="page-root">
-
-<div class="ebb-root">
-    <div class="header-element">BLOG POSTS</div>
-    <a class="content-link-fill-element" href="#">Cool blog post</a>  
-    <a class="content-link-fill-element" href="#">Cool blog post</a>  
-    <a class="content-link-fill-element" href="#">Cool blog post</a>  
-  </div>
-  <div class="flow-root">
-  
-    <div class="header-element">WHOAMI</div>
-    <div class="content-element"><img src="coffeestack.png" class="content-image-establish-element">I go by many names, the mystery man, the guy that never shuts up, Lineup 6: Suspect 4, Chief Procrastinator, T-Bone, and some that haven’t been heard since my court trial in '06. I’m currently studying Biology, Chemistry, and Computer Science as my preMED trifecta. I live in the delightfully horrific state of London where I consume scones and coffee for nutrients.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>inhaler boy</title>
+    <meta charset="utf-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+    <meta name="description" content="nakodev's dumb blog"/>
+    <meta name="keywords" content="nakodev nakotami nakatomi epoch kaverti bloxcity blox city tetrimus"/>
+    <meta name="author" content="nakotami" />
+    <meta name="copyright" content="nakotami" />
+    <meta name="robots" content="index"/>
+    <link rel="stylesheet" type="text/css" href="static/stylesheets/allegro.css"/>
+    <script src="static/javascript/main.js"></script>
+  </head>
+  <body>
+    <div class="headline-root">
+      <div class="headliner-element">nakodev</div>
+      <div id="sle" class="subliner-element">something has gone <b>very</b> wrong...</div>
+      <img src="nakodevicon.png" class="logo-element">
     </div>
-    
-    <div class="header-element">MY COLLECTIONS</div>
-    <a class="content-link-fill-element" href="#">Music</a>
-    <a class="content-link-fill-element" href="#">Movies/Shows</a>
-    <a class="content-link-fill-element" href="#">Books</a>
-    <a class="content-link-fill-element" href="#">Pre-Intel Apple Devices</a>
-    
-    <div class="header-element">PHOTO OF THE MONTH</div>
-    <img src="londoneye.png" class="content-image-fill-element">
-
-    <div class="header-element">MY MIND</div>
-    <a class="content-link-fill-element" href="#">Designs</a>
-    <a class="content-link-fill-element" href="#">Writing</a>
-    <a class="content-link-fill-element" href="#">Photographs</a>
-    <a class="content-link-fill-element" href="#">Software</a>
-    <a class="content-link-fill-element" href="#">ADHD Scribbles</a>
-
-    <div class="header-element">CONNECT</div>
-    <a class="content-link-fill-element" href="#">Look at my Twitter</a>
-    <a class="content-link-fill-element" href="#">Send an email</a>
-    
-  </div>
-</div>
-
-<script>
-funnies = [
-  "ben folds = bandit",
-  "natalie is freezing",
-  "you're the piano man",
-  "500 days of ages",
-  "20 grams of weight",
-  "duck or ape",
-  "new york i love you",
-  "kim and matt",
-  "oled soundsystem",
-  "mince raft",
-  "emily is offline",
-  "plage lapin",
-  "lili's the prom queen",
-  "doofus and doofuser",
-  "o soundtrack my heart",
-  "x(y) flights of loving",
-  "where is my mind",
-  "domo arigato mr roboto",
-  "christmas kids",
-  "i'll know, i'll know",
-  "pemberton you genius",
-  "1998. the new mac.",
-  "aguas de marco",
-  "OK STALL? PULL UP?",
-  "change your name",
-  "change your mind",
-  "kate nash is old now",
-  "the remix is sad",
-  "the deschanel allure",
-  "stauberville, oklahoma",
-  "i changed my mind",
-  "the remix is hopeful",
-  "NYPC! we want to!",
-  "she's got you high",
-  "oh bo en",
-  "prelude to memories",
-  "sugar town",
-  "arctic monkies",
-  "panic!42",
-  "break in the mono",
-  "hello good night",
-  "kero kero",
-  "is it weapons grade?",
-  "sing like millions",
-  "lie with a smile",
-  "concert in april?",
-  "concert postponed.",
-  "source you crave",
-  "fantastic flavoured fancy",
-  "what you want?",
-  "2009 was a nightmare",
-  "aquascope",
-  "they wanna have fun",
-  "lauper was a fever dream",
-  "shake it like a polaroid",
-  "rip ted :(",
-  "the blanks were unique",
-  "rocket man",
-  "get lucky",
-  "did this for md5"
-]
-
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-}
-
-document.getElementById("sle").innerHTML = funnies[getRandomInt(0, funnies.length)]
-</script>
+    <div class="page-root">
+      <div class="ebb-root">
+        <div class="header-element">BLOG POSTS</div>
+        <a class="content-link-fill-element" href="#">Cool blog post</a>  
+        <a class="content-link-fill-element" href="#">Cool blog post</a>  
+        <a class="content-link-fill-element" href="#">Cool blog post</a>  
+      </div>
+      <div class="flow-root">
+        <div class="header-element">WHOAMI</div>
+        <div class="content-element"><img src="coffeestack.png" class="content-image-establish-element">I go by many names, the mystery man, the guy that never shuts up, Lineup 6: Suspect 4, Chief Procrastinator, T-Bone, and some that haven’t been heard since my court trial in '06. I’m currently studying Biology, Chemistry, and Computer Science as my preMED trifecta. I live in the delightfully horrific state of London where I consume scones and coffee for nutrients.</div>
+        <div class="header-element">MY COLLECTIONS</div>
+        <a class="content-link-fill-element" href="#">Music</a>
+        <a class="content-link-fill-element" href="#">Movies/Shows</a>
+        <a class="content-link-fill-element" href="#">Books</a>
+        <a class="content-link-fill-element" href="#">Pre-Intel Apple Devices</a>
+        <div class="header-element">PHOTO OF THE MONTH</div>
+        <img src="londoneye.png" class="content-image-fill-element">
+        <div class="header-element">MY MIND</div>
+        <a class="content-link-fill-element" href="#">Designs</a>
+        <a class="content-link-fill-element" href="#">Writing</a>
+        <a class="content-link-fill-element" href="#">Photographs</a>
+        <a class="content-link-fill-element" href="#">Software</a>
+        <a class="content-link-fill-element" href="#">ADHD Scribbles</a>
+        <div class="header-element">CONNECT</div>
+        <a class="content-link-fill-element" href="#">Look at my Twitter</a>
+        <a class="content-link-fill-element" href="#">Send an email</a>
+      </div>
+    </div>
+  </body>
+</html>
