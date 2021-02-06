@@ -144,7 +144,6 @@ a:visited{
 @media only screen and (max-width: 750px) {
   .page-root{
     display: block;
-    width: 100%;
   }
   .ebb-root{
     display: block;
