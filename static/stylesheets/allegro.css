@@ -62,7 +62,6 @@ div{
 .content-image-establish-element{
   float: left;
   padding-right: 15px;
-  margin-bottom: 10px;
 }
 
 .content-image-fill-element{
@@ -166,5 +165,8 @@ a:visited{
   }
   body{
     min-width: fit-content;
+  }
+  .content-image-establish-element{
+    height: 100px;
   }
 }
