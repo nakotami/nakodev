@@ -149,6 +149,10 @@ a:visited{
     display: block;
     margin-left: 10px;
     margin-right: 10px;
+    flex: none;
+  }
+  .flow-root{
+    flex: none;
   }
   .headliner-element{
     visibility: hidden;
