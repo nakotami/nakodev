@@ -1,0 +1,74 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+:root{
+  --primary: #F0F0F0;
+  --primary-text: #5B5B5B;
+  --primary-hover: #A1A1A1;
+  --primary-hover-text: #FFFFFF;
+
+  --secondary: #FFFFFF;
+  --secondary-hover: #FFFFFF;
+  --secondary-text: #FFFFFF;
+
+  --focus: #99b3ffdd;
+
+}
+
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+h1 { font-size: 3.0em; font-weight: 800; }
+h2 { font-size: 2.0em; font-weight: 800; }
+h3 { font-size: 1.7em; font-weight: 800; }
+h4 { font-size: 1.5em; font-weight: 800; }
+h5 { font-size: 1.3em; font-weight: 800; }
+h6 { font-size: 1.0em; font-weight: 800; }
+
+input{ font-family: 'Inter', sans-serif; }
+
+input[type=submit]{
+  min-width: 180px;
+  height: 40px;
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: var(--primary-text);
+  transition: background-color .15s, 
+              color .15s,
+              box-shadow .2s;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover{
+  background-color: var(--primary-hover);
+  color: var(--primary-hover-text);
+}
+
+*:focus {
+  outline: none !important;
+  box-shadow: 0px 0px 6px 2px var(--focus) !important;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+</style>
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<h1>header 1</h1>
+<h2>header 2</h2>
+<h3>header 3</h3>
+<h4>header 4</h4>
+<h5>header 5</h5>
+<h6>header 6</h6>
+<p>paragraph</p>
+<input value="PRIMARY BUTTON" type="submit">
