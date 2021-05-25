@@ -1,0 +1,238 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+body {
+  --left-width: 200px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  user-select: none;
+}
+
+body.resizing {
+  cursor: col-resize;
+}
+
+.app-content,
+.app-sidebar,
+#app-sidebar-draghandle {
+  top: 0;
+  height: 100%;
+  position: absolute;
+}
+
+.app-sidebar {
+  background: #e6e9f0;
+  z-index: 300;
+  width: var(--left-width);
+  background: rgba(0, 0, 0, 0.56);
+  backdrop-filter: blur(80px);
+}
+
+.app-content {
+  right: 0;
+  width: calc(100% - var(--left-width));
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(80px);
+}
+
+#app-sidebar-draghandle {
+  right: -5px;
+  width: 10px;
+  opacity: 0;
+  z-index: 400;
+  cursor: col-resize;
+}
+
+.app-sidebar-navigation{
+  padding: 16px;
+  padding-top: 23px;
+  color: white;
+  user-select: none;
+}
+
+.app-sidebar-navigation > span {
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-size: 15px;
+  padding-right: 10px;
+}
+
+.app-sidebar-navigation > span:hover {
+  opacity: 0.7;
+}
+
+.app-sidebar-navigation > span:active {
+  filter: brightness(0.6);
+  transition: filter 0.01s;
+}
+
+.app-sidebar-directories {
+  padding: 17px;
+  padding-top: 5px;
+  height: calc(100% - 85px);
+  font-size: 13px;
+  color: white;
+  overflow: auto;
+  position: relative;
+  margin-right: 8px;
+}
+
+.app-sidebar-directory{
+  opacity: 0.54;
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+
+.directory-head{
+  opacity: 1;
+}
+
+.directory-active{
+  opacity: 0.90;
+}
+
+.app-sidebar-directory:hover{
+  filter: brightness(0.8);
+  transition: filter 0.2s;
+}
+
+.app-sidebar-directory:active{
+  filter: brightness(0.6);
+}
+
+.app-sidebar-ornate{
+  position: absolute;
+  width: 3px;
+  border-radius: 3px;
+  background-color: black;
+  opacity: 0.08;
+}
+
+.app-sidebar-spacing{
+  height: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #575757;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #515151;
+}
+
+.app-content-address{
+  margin-top: 22px;
+  margin-left: 25px;
+  color: white;
+}
+
+.address-divider{
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.app-content-address>a:hover{
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+.app-content-directorynote{
+  font-size: 14px;
+  padding-left: 25px;
+  padding-top: 15px;
+  color: white;
+  font-weight: 250;
+}
+</style>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<div class="app-sidebar">
+  
+  <div class="app-sidebar-navigation">
+    <span class="material-icons">arrow_back</span>
+    <span class="material-icons">arrow_forward</span>
+  </div>
+  
+  <div class="app-sidebar-directories">
+    <div class="app-sidebar-directory directory-head">Michelle</div>
+    <div style="height: 130px" class="app-sidebar-ornate"></div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory">Desktop</div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory directory-active">Downloads</div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory">Development</div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory">Education</div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory">Pictures</div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory">Videos</div>
+    
+    <div class="app-sidebar-spacing"></div>
+    
+    <div class="app-sidebar-directory">Sandstore VPS</div>
+    <div style="height: 60px" class="app-sidebar-ornate"></div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory">Website</div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory">Analytics</div>
+    <div style="margin-left: 15px;" class="app-sidebar-directory">Processes</div>
+    
+  </div>
+  
+  <div id="app-sidebar-draghandle"></div>
+</div>
+
+<div class="app-content">
+  <div class="app-content-address">
+    <a>Michelle</a> <span class="address-divider">›</span> <a>Downloads</a>
+  </div>
+  <div class="app-content-directorynote">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sint dolorem numquam, eaque asperiores esse necessitatibus quisquam autem ad saepe adipisci atque tempore cupiditate odit expedita doloremque totam repellat quia.
+  </div>
+</div>
+
+
+<script>
+
+let dragging = 0,
+body = document.body,
+target = document.getElementById('app-sidebar-draghandle');
+
+function clearJSEvents() {
+  dragging = 0;
+  body.removeEventListener("mousemove", resize);
+  body.classList.remove('resizing');
+}
+
+function resize(e) {
+  if (e.pageX > 250 || e.pageX < 150) {
+    return;
+  }
+  body.style.setProperty("--left-width", e.pageX + 'px');
+}
+
+target.onmousedown = function(e) {
+  e.preventDefault();
+  dragging = 1;
+  body.addEventListener('mousemove', resize);
+  body.classList.add('resizing');
+};
+
+document.onmouseup = function() {
+  dragging ? clearJSEvents() : '';
+};
+</script>
