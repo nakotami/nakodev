@@ -316,7 +316,10 @@ function compile() {
 
 
 
-  const template = `{{Infobox country
+  const template = `[[Category:Micronations]]
+[[Category:${long_src}]]
+{{stub}}
+{{Infobox country
 | common_name = ${short_src}
 | linking_name = ${long_src}
 | name = ${long_src}
@@ -397,8 +400,7 @@ ${geo_src}
 ${econ_src}
 
 ${media_src}
-
-<nowiki>[[Category:Micronations]] [[Category:${long_src}]]</nowiki>`;
+`;
 
   $("#result").html("<hr>Copy and paste this into the <a href='https://micronations.wiki/wiki/MicroWiki:Create_page'>create page thing</a> on the wiki. <br><br><textarea>" + template + "</textarea><br><br><br>");
   return;
