@@ -1,0 +1,411 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MicroWiki Page Generator</title>
+  <meta name="description" content="A simple page generator for MicroWiki">
+  <meta name="author" content="nakotami">
+
+  <meta property="og:title" content="MicroWiki Page Generator">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.nako.dev/microwikipagegenerator">
+  <meta property="og:description" content="A simple page generator for MicroWiki">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    body{
+      font-family: 'Inter', sans-serif;
+    }
+
+    u{
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    input{
+      margin-left: 10px;
+    }
+
+    i{
+      display: block;
+      max-width: 600px;
+    }
+
+    textarea{
+      font-family: 'arial', sans-serif;
+      width: 400px;
+      height: 100px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<h1>MicroWiki Page Generator</h1>
+<i>Literally just the regular page template but with input boxes due to MediaWiki being unusable to anyone born after 1985.<br><br> Keep in mind, this is purely for creating stubs and you'll have to go in and make edits with links and stuff if you want to even think about gaining good article status.</i><br>
+<sub>anything with <span style="color: #FF0000;">*</span> is required, other things left empty won't show up</sub>
+<br><br><br>
+
+<label><span style="color: #FF0000;">*</span>Your nation's full name:</label><input placeholder="Republic of Exampleland" id="long"><u></u>
+<label><span style="color: #FF0000;"><span style="color: #FF0000;">*</span></span>Your nation's short name:</label><input placeholder="Exampleland" id="short"><u></u>
+<label>Your nation's motto:</label><input placeholder="Examplus sit amet" id="motto"><u></u>
+<label>Your motto's translation:</label><input placeholder="Latin: Example a lot" id="motto_t"><br><sub>If not in English: write it as "Language: Translation"</sub><u></u>
+
+<label>Your nation's anthem name:</label><input placeholder="Example Bop in C Minor" id="anthem"><u></u>
+<label>Your nation's anthem audio file:</label><input placeholder="example_bop.mp3" id="anthem_aud"><br><sub>This is an audio file, make sure it has been <a href="https://micronations.wiki/wiki/Special:Upload">uploaded to MicroWiki</a> and that you own the copyright.</sub><u></u>
+
+
+<label>Your nation's capital:</label><input placeholder="Example City" id="cap"><u></u>
+<label>A map of your nation:</label><input placeholder="Exampleland_Map.png" id="map"><input placeholder="Description of the map" id="map_desc"><br><sub>This is an image, make sure it has been <a href="https://micronations.wiki/wiki/Special:Upload">uploaded to MicroWiki</a> and that you own the copyright.</sub><u></u>
+
+<label>Your nation's largest city:</label><input placeholder="Example City" id="lar"><u></u>
+<label>Your nation's offical language(s):</label><input placeholder="English, Exampleish" id="lan"><u></u>
+<label>Your nation's demonym:</label><input placeholder="Examplean" id="dem"><u></u>
+<label>Your nation's offical religion:</label><input placeholder="Religion" id="reli"><u></u>
+<label>Your nation's government type:</label><input placeholder="Parlimentary Democracy" id="gov"><u></u>
+<label>Your nation's leader:</label><input placeholder="President" id="lead_t"><input placeholder="Jane Doe" id="lead_n"><u></u>
+<label>Your nation's vice-leader:</label><input placeholder="Vice President" id="vice_t"><input placeholder="John Doe" id="vice_n"><u></u>
+<label>Your nation's legislature:</label><input placeholder="Parliament" id="leg"><u></u>
+
+<label>Your nation's year of establishment:</label><input placeholder="2015" id="est"><u></u>
+<label>Your nation's area claimed in km²:</label><input placeholder="30" id="clm"><u></u>
+<label>Your nation's population:</label><input placeholder="231" id="pop"><input placeholder="as of 2016 census" id="pop_n"><u></u>
+<label>Your nation's currency:</label><input placeholder="Exampleland Dinar" id="curr"><u></u>
+<label>Your nation's time zone:</label><input placeholder="UTC+5" id="time"><br><sub>If UTC±0 then enter "UTC"</sub><u></u>
+<label>Your national sport:</label><input placeholder="Tennis" id="sport"><u></u>
+<label>Your national animal:</label><input placeholder="Platypus" id="animal"><u></u>
+<label>Your nation's driving side:</label><input placeholder="left" id="driving"><u></u>
+<label>Your nation's date format:</label><input placeholder="dd-mm-yyyy" id="date"><u></u>
+
+<label>Your nation's website:</label><input placeholder="www.nako.dev" id="web"><u></u>
+<hr>
+<label><span style="color: #FF0000;"><span style="color: #FF0000;">*</span></span>Your nation's flag:</label><input placeholder="Flag_Of_Exampleland.png" id="flag"><br><sub>This is an image, make sure it has been <a href="https://micronations.wiki/wiki/Special:Upload">uploaded to MicroWiki</a> and that you own the copyright.</sub><u></u>
+
+<label>Your nation's emblem/crest/coat of arms:</label><input placeholder="Coat of Arms" id="emb_title"><input placeholder="CoA_Of_Exampleland.png" id="emb_img"><br><sub>This is an image, make sure it has been <a href="https://micronations.wiki/wiki/Special:Upload">uploaded to MicroWiki</a> and that you own the copyright.</sub><u></u>
+
+<hr>
+
+<label><span style="color: #FF0000;"><span style="color: #FF0000;">*</span></span>Your introduction paragraph</label><br>
+<textarea id="pin">
+The Republic of Example, more commonly known as Example, is a micronation in The United Arab Emirates. [FIRST PARAGRAPH GIVE RELEVANT INFORMATION ABOUT THE HISTORY, SIGNIFICANT SUBDIVISIONS, ETC]
+
+[PARAGRAPH GIVING AN OVERVIEW OF THE POLITICS AND GOVERNANCE]
+
+[OVERVIEW OF RELATIONSHIP TO BROADER MICRONATIONAL MOVEMENT / FOREIGN POLICY]
+</textarea>
+
+<br><br><br>
+
+<label>A section on Etymology</label><br>
+<textarea id="ety">
+[INSERT INFORMATION ABOUT THE ORIGINS OF THE NAME OF YOUR MICRONATION]
+</textarea>
+
+<br><br><br>
+
+<label>A section on History</label><br>
+<textarea id="hist">
+((INSERT A SHORT HISTORY OF YOUR MICRONATION [i.e. a few important events]))
+</textarea>
+
+<br><br><br>
+
+<label>A section on Politics and government</label><br>
+<textarea id="pol">
+((INSERT INFORMATION ABOUT YOUR GOVERNMENT TYPE, MINISTRIES, HOW THE LEGISLATURE [or parliament] RUNS, ETC.))
+</textarea>
+
+<br><br><br>
+
+<label>A section on Law and order</label><br>
+<textarea id="law">
+((INSERT INFORMATION ABOUT JUDICIAL SYSTEM, POLICE, ETC.))
+</textarea>
+
+<br><br><br>
+
+<label>A section on Foreign relations</label><br>
+<textarea id="for">
+((INSERT INFORMATION ABOUT THE RELATIONS THAT YOUR MICRONATION HAS WITH OTHER MICRONATIONS))
+</textarea>
+
+<br><br><br>
+
+<label>A section on Military</label><br>
+<textarea id="mil">
+((INSERT INFORMATION ABOUT THE STRUCTURE OF THE MILITARY, DIFFERENT BRANCHES, WEAPONRY, CONFLICTS INVOLVED IN, ETC.))
+</textarea>
+
+<br><br><br>
+
+<label>A section on Geography and climate</label><br>
+<textarea id="geo">
+((INSERT TEMPERATURE, WEATHER, TERRAIN, LOCATION AND OTHER RELATED INFO HERE))
+</textarea>
+
+<br><br><br>
+
+<label>A section on Economy</label><br>
+<textarea id="econ">
+((INSERT FISCAL INFORMATION, LIKE EXPORTS, IMPORTS, INDUSTRIES, ETC.))
+
+</textarea>
+
+<br><br><br>
+
+<label>A section on Culture and Media</label><br>
+<textarea id="media">
+((INSERT INFORMATION ABOUT THE CUSTOMS, EDUCATION, LANGUAGE(S), THE ARTS, THE PRESS, TELEVISION, ETC.))
+</textarea>
+
+<br><br>
+<i>Want to add your own custom sections? Learn how to use MediaWiki.</i>
+<br>
+<button onclick="compile();">Make me a page!</button>
+<br><br><br><br>
+<div id="result"></div>
+<br><br><br><br>
+<script>
+function isEmpty(str) {
+  return !str.trim().length;
+}
+
+function compile() {
+  const pin_src = $("#pin").val();
+  const long_src = $("#long").val();
+  const short_src = $("#short").val();
+  const flag_src = $("#flag").val();
+
+  if (isEmpty(pin_src) || isEmpty(long_src) || isEmpty(short_src) || isEmpty(flag_src)) {
+    alert("You need to fill in the required fields.");
+    return;
+  }
+
+  // kill me lmao
+  // i had to generate 80% of this crap with python and regex
+  // at least it works :/
+
+  const motto_src = $("#motto").val();
+  const motto_t_src = $("#motto_t").val();
+  const anthem_src = $("#anthem").val();
+  const anthem_aud_src = $("#anthem_aud").val();
+  const cap_src = $("#cap").val();
+  const map_src = $("#map").val();
+  const map_desc_src = $("#map_desc").val();
+  const lar_src = $("#lar").val();
+  const lan_src = $("#lan").val();
+  const dem_src = $("#dem").val();
+  const reli_src = $("#reli").val();
+  const gov_src = $("#gov").val();
+  const lead_t_src = $("#lead_t").val();
+  const lead_n_src = $("#lead_n").val();
+  const vice_t_src = $("#vice_t").val();
+  const vice_n_src = $("#vice_n").val();
+  const leg_src = $("#leg").val();
+  const est_src = $("#est").val();
+  const clm_src = $("#clm").val();
+  const pop_src = $("#pop").val();
+  const pop_n_src = $("#pop_n").val();
+  const curr_src = $("#curr").val();
+  const time_src = $("#time").val();
+  const sport_src = $("#sport").val();
+  const animal_src = $("#animal").val();
+  const driving_src = $("#driving").val();
+  const date_src = $("#date").val();
+  const web_src = $("#web").val();
+  const emb_title_src = $("#emb_title").val();
+  const emb_img_src = $("#emb_img").val();
+
+  var ety_src;
+  var hist_src;
+  var pol_src;
+  var law_src;
+  var for_src;
+  var mil_src;
+  var geo_src;
+  var econ_src;
+  var media_src;
+
+	// before you tell me to use a for loop just
+  // wanna let you know that i did use one...
+  
+  // when i generated this in python
+
+  if (isEmpty($("#ety").val())) {
+    ety_src = "";
+  } else {
+    ety_src = "== Etymology ==\n" + $("#ety").val();
+  }
+
+  if (isEmpty($("#hist").val())) {
+    hist_src = "";
+  } else {
+    hist_src = "== History ==\n" + $("#hist").val();
+  }
+
+  if (isEmpty($("#pol").val())) {
+    pol_src = "";
+  } else {
+    pol_src = "== Politics and government ==\n" + $("#pol").val();
+  }
+
+  if (isEmpty($("#law").val())) {
+    law_src = "";
+  } else {
+    law_src = "== Law and order ==\n" + $("#law").val();
+  }
+
+  if (isEmpty($("#for").val())) {
+    for_src = "";
+  } else {
+    for_src = "=== Foreign relations ===\n" + $("#for").val();
+  }
+
+  if (isEmpty($("#mil").val())) {
+    mil_src = "";
+  } else {
+    mil_src = "=== Military ===\n" + $("#mil").val();
+  }
+
+  if (isEmpty($("#geo").val())) {
+    geo_src = "";
+  } else {
+    geo_src = "== Geography and climate ==\n" + $("#geo").val();
+  }
+
+  if (isEmpty($("#econ").val())) {
+    econ_src = "";
+  } else {
+    econ_src = "== Economy ==\n" + $("#econ").val();
+  }
+
+  if (isEmpty($("#media").val())) {
+    media_src = "";
+  } else {
+    media_src = "== Culture and media ==\n" + $("#media").val();
+  }
+
+  var motto_final = "";
+  var pop_final = "";
+  var anthem_final = "";
+  var web_final = "";
+
+  if (isEmpty(motto_t_src)) {
+    motto_final = motto_src;
+  } else {
+    motto_final = motto_src + "(" + motto_t_src + ")";
+  }
+
+  if (isEmpty(pop_n_src)) {
+    pop_final = pop_n_src;
+  } else {
+    pop_final = "(" + pop_n_src + ")";
+  }
+
+  if (isEmpty(anthem_aud_src)) {
+    anthem_final = anthem_src;
+  } else {
+    anthem_final = anthem_src + "<br>[[File:" + anthem_aud_src + "|thumb]]";
+  }
+
+  if (isEmpty(web_src)) {
+    web_final = web_src;
+  } else {
+    web_final = "[" + web_src + " Government Website]";
+  }
+
+
+
+  const template = `{{Infobox country
+| common_name = ${short_src}
+| linking_name = ${long_src}
+| name = ${long_src}
+| motto = ${motto_final}
+| status = 
+| image_flag = [[File:${flag_src}|125px]]
+| image_coat = ${emb_img_src}
+| symbol_width = 100x100px
+| symbol_type = ${emb_title_src}
+| alt_flag = None
+| anthem = ${anthem_final}
+| royal_anthem = 
+| image_map = ${map_src}
+| map_width = 220px
+| alt_map = 
+| map_caption = ${map_desc_src}
+| image_map2 = 
+| alt_map2 = 
+| map_caption2 = 
+| capital = ${cap_src}
+| largest_city = ${lar_src}
+| official_languages = ${lan_src}
+| national_languages =
+| regional_languages = 
+| ethnic_groups = 
+| religion = ${reli_src}
+| demonym = ${dem_src}
+| government_type =  ${gov_src}
+| leader_title1 = ${lead_t_src}
+| leader_name1 = ${lead_n_src}
+| leader_title2 = ${vice_t_src}
+| leader_name2 = ${vice_n_src}
+| leader_title3 = 
+| leader_name3 =
+| legislature = ${leg_src}
+| sovereignty_type = 
+| established = ${est_src}
+| area_km2 = ${clm_src}
+| percent_water = 
+| population = ${pop_src}
+| population_notes = ${pop_final}
+| population_density_km2 = 
+| HDI = 
+| HDI_year = 
+| HDI_change =
+| currency = ${curr_src}
+| currency_code = 
+| time_zone = ${time_src}
+| utc_offset = 
+| time_zone_DST = 
+| utc_offset_DST = 
+| date_format = ${date_src}
+| drives_on = ${driving_src}
+| nat_sport = ${sport_src}
+| nat_animal = ${animal_src}
+| date_format = ${date_src}
+| calling_code = 
+| web = ${web_src}
+| notes =
+}}
+${pin_src}
+
+${ety_src}
+
+${hist_src}
+
+${pol_src}
+
+${law_src}
+
+${for_src}
+
+${mil_src}
+
+${geo_src}
+
+${econ_src}
+
+${media_src}
+
+<nowiki>[[Category:Micronations]] [[Category:${long_src}]]</nowiki>`;
+
+  $("#result").html("<hr>Copy and paste this into the <a href='https://micronations.wiki/wiki/MicroWiki:Create_page'>create page thing</a> on the wiki. <br><br><textarea>" + template + "</textarea><br><br><br>");
+  return;
+}
+</script>
+</body>
+</html>
