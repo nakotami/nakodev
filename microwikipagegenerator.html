@@ -75,7 +75,7 @@
 
 <label>Your nation's year of establishment:</label><input placeholder="2015" id="est"><u></u>
 <label>Your nation's area claimed in km²:</label><input placeholder="30" id="clm"><u></u>
-<label>Your nation's population:</label><input placeholder="231" id="pop"><input placeholder="as of 2016 census" id="pop_n"><u></u>
+<label>Your nation's population:</label><input placeholder="231" id="pop"><input placeholder="2021" id="pop_n"><u></u>
 <label>Your nation's currency:</label><input placeholder="Exampleland Dinar" id="curr"><u></u>
 <label>Your nation's time zone:</label><input placeholder="UTC+5" id="time"><br><sub>If UTC±0 then enter "UTC"</sub><u></u>
 <label>Your national sport:</label><input placeholder="Tennis" id="sport"><u></u>
@@ -302,12 +302,6 @@ function compile() {
     motto_final = motto_src + "(" + motto_t_src + ")";
   }
 
-  if (isEmpty(pop_n_src)) {
-    pop_final = pop_n_src;
-  } else {
-    pop_final = "(" + pop_n_src + ")";
-  }
-
   if (isEmpty(anthem_aud_src)) {
     anthem_final = anthem_src;
   } else {
@@ -362,8 +356,8 @@ function compile() {
 | established = ${est_src}
 | area_km2 = ${clm_src}
 | percent_water = 
-| population = ${pop_src}
-| population_notes = ${pop_final}
+| population_census = ${pop_src}
+| population_census_year = ${pop_n_src}
 | population_density_km2 = 
 | HDI = 
 | HDI_year = 
@@ -374,14 +368,13 @@ function compile() {
 | utc_offset = 
 | time_zone_DST = 
 | utc_offset_DST = 
-| date_format = ${date_src}
 | drives_on = ${driving_src}
 | nat_sport = ${sport_src}
 | nat_animal = ${animal_src}
 | date_format = ${date_src}
 | calling_code = 
-| web = ${web_src}
-| notes = [https://nako.dev/microwikipagegenerator made with <3]
+| official_website = ${web_src}
+| footnote_a = [https://nako.dev/microwikipagegenerator made with <3]
 }}
 ${pin_src}
 
